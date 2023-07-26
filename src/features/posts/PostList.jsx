@@ -35,11 +35,15 @@ const PostsList = () => {
     content = orderedPosts.map((post) => <Post key={post.id} post={post} />);
   }
 
+  const orderedPosts = posts
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date));
+
   return (
     <div className="">
       <h1 className="button">Posts</h1>
 
-      {content}
+      <Pagination data={orderedPosts} itemsPerPage={5} />
     </div>
   );
 };
