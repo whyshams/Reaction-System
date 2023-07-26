@@ -1,17 +1,14 @@
-import PostsList from "./features/posts/PostList"
-import AddPostForm from "./features/posts/AddPostForm"
+import PostsList from "./features/posts/PostList";
+import AddPostForm from "./features/posts/AddPostForm";
 
 function App() {
-  
-
   return (
     <>
-     
-      <AddPostForm/>
-       
+      <AddPostForm />
+
       <PostsList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
